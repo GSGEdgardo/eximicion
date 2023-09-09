@@ -84,11 +84,11 @@ namespace BackendINAISO.Migrations
                 columns: new[] { "Id", "CreatedAt", "ModifiedAt", "Name" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1000), new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1051), "Usuario1" },
-                    { 2, new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1053), new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1054), "Usuario2" },
-                    { 3, new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1056), new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1057), "Usuario3" },
-                    { 4, new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1059), new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1060), "Usuario4" },
-                    { 5, new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1061), new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1062), "Usuario5" }
+                    { 1, new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5803), new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5848), "Usuario1" },
+                    { 2, new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5850), new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5851), "Usuario2" },
+                    { 3, new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5853), new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5854), "Usuario3" },
+                    { 4, new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5856), new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5857), "Usuario4" },
+                    { 5, new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5859), new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5860), "Usuario5" }
                 });
 
             migrationBuilder.InsertData(
@@ -96,14 +96,14 @@ namespace BackendINAISO.Migrations
                 columns: new[] { "Id", "AplicacionId", "FechaFin", "FechaInicio", "UsuarioId" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2023, 9, 12, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1176), new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1175), 1 },
-                    { 2, 1, new DateTime(2023, 9, 13, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1182), new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1180), 2 },
-                    { 3, 2, new DateTime(2023, 9, 14, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1184), new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1183), 3 },
-                    { 4, 2, new DateTime(2023, 9, 15, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1187), new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1186), 4 },
-                    { 5, 3, new DateTime(2023, 9, 16, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1190), new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1189), 1 },
-                    { 6, 3, new DateTime(2023, 9, 17, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1193), new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1191), 2 },
-                    { 7, 1, new DateTime(2023, 9, 18, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1195), new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1194), 3 },
-                    { 8, 1, new DateTime(2023, 9, 19, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1198), new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1197), 4 }
+                    { 1, 1, new DateTime(2023, 9, 12, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5984), new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5982), 1 },
+                    { 2, 1, new DateTime(2023, 9, 13, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5989), new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5988), 2 },
+                    { 3, 2, new DateTime(2023, 9, 14, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5992), new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5991), 3 },
+                    { 4, 2, new DateTime(2023, 9, 15, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5995), new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5994), 4 },
+                    { 5, 3, new DateTime(2023, 9, 16, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5997), new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5996), 1 },
+                    { 6, 3, new DateTime(2023, 9, 17, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(6000), new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5999), 2 },
+                    { 7, 1, new DateTime(2023, 9, 18, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(6003), new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(6002), 3 },
+                    { 8, 1, new DateTime(2023, 9, 19, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(6005), new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(6004), 4 }
                 });
 
             migrationBuilder.CreateIndex(

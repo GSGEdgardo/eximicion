@@ -30,6 +30,8 @@ namespace backendINAISO.Data
                 .HasOne(r => r.Aplicacion)
                 .WithMany(a => a.Reservas)
                 .HasForeignKey(r => r.AplicacionId);
+                
+
 
             modelBuilder.Entity<Usuario>().HasData(
                 new Usuario { Id = 1, Name = "Usuario1", CreatedAt = DateTime.Now, ModifiedAt = DateTime.Now },

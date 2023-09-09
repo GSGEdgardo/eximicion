@@ -15,87 +15,55 @@ namespace backendINAISO.Controllers
         {
             _context = context;
         }
-
-        // GET: api/Reservas
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Reserva>>> GetReservas()
+        [HttpGet("reporteReservasPorUsuario")]
+        public IActionResult GetReporteReservasPorUsuario()
         {
-            return await _context.Reservas.ToListAsync();
-        }
-
-        // GET: api/Reservas/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Reserva>> GetReserva(int id)
-        {
-            var reserva = await _context.Reservas.FindAsync(id);
-
-            if (reserva == null)
-            {
-                return NotFound();
-            }
-
-            return reserva;
-        }
-
-        // POST: api/Reservas
-        [HttpPost]
-        public async Task<ActionResult<Reserva>> PostReserva(Reserva reserva)
-        {
-            _context.Reservas.Add(reserva);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetReserva), new { id = reserva.Id }, reserva);
-        }
-
-        // PUT: api/Reservas/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutReserva(int id, Reserva reserva)
-        {
-            if (id != reserva.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(reserva).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ReservaExists(id))
+            var reporte = _context.Reservas
+                .Include(r => r.Usuario)
+                .Include(r => r.Aplicacion)
+                .GroupBy(r => r.Usuario)
+                .Select(group => new
                 {
-                    return NotFound();
-                }
-                else
+                    UsuarioId = group.Key.Id,
+                    UsuarioNombre = group.Key.Name,
+                    Reservas = group.Select(r => new
+                    {
+                        Id = r.Id,
+                        UsuarioId = r.UsuarioId,
+                        AplicacionId = r.AplicacionId,
+                        ClaseAplicacion = r.Aplicacion.Clase,
+                        FechaInicio = r.FechaInicio,
+                        FechaFin = r.FechaFin
+                    })
+                })
+                .ToList();
+
+            return Ok(reporte);
+        }
+        [HttpGet("reporteReservasPorAplicacion")]
+        public IActionResult GetReporteReservasPorAplicacion()
+        {
+            var reporte = _context.Reservas
+                .Include(r => r.Usuario)
+                .Include(r => r.Aplicacion)
+                .GroupBy(r => r.Aplicacion)
+                .Select(group => new
                 {
-                    throw;
-                }
-            }
+                    AplicacionId = group.Key.Id,
+                    ClaseAplicacion = group.Key.Clase,
+                    Reservas = group.Select(r => new
+                    {
+                        Id = r.Id,
+                        UsuarioId = r.UsuarioId,
+                        UsuarioNombre = r.Usuario.Name,
+                        FechaInicio = r.FechaInicio,
+                        FechaFin = r.FechaFin
+                    })
+                })
+                .ToList();
 
-            return NoContent();
+            return Ok(reporte);
         }
 
-        // DELETE: api/Reservas/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteReserva(int id)
-        {
-            var reserva = await _context.Reservas.FindAsync(id);
-            if (reserva == null)
-            {
-                return NotFound();
-            }
-
-            _context.Reservas.Remove(reserva);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool ReservaExists(int id)
-        {
-            return _context.Reservas.Any(e => e.Id == id);
-        }
     }
 }

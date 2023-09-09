@@ -80,64 +80,64 @@ namespace BackendINAISO.Migrations
                         {
                             Id = 1,
                             AplicacionId = 1,
-                            FechaFin = new DateTime(2023, 9, 12, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1176),
-                            FechaInicio = new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1175),
+                            FechaFin = new DateTime(2023, 9, 12, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5984),
+                            FechaInicio = new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5982),
                             UsuarioId = 1
                         },
                         new
                         {
                             Id = 2,
                             AplicacionId = 1,
-                            FechaFin = new DateTime(2023, 9, 13, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1182),
-                            FechaInicio = new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1180),
+                            FechaFin = new DateTime(2023, 9, 13, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5989),
+                            FechaInicio = new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5988),
                             UsuarioId = 2
                         },
                         new
                         {
                             Id = 3,
                             AplicacionId = 2,
-                            FechaFin = new DateTime(2023, 9, 14, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1184),
-                            FechaInicio = new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1183),
+                            FechaFin = new DateTime(2023, 9, 14, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5992),
+                            FechaInicio = new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5991),
                             UsuarioId = 3
                         },
                         new
                         {
                             Id = 4,
                             AplicacionId = 2,
-                            FechaFin = new DateTime(2023, 9, 15, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1187),
-                            FechaInicio = new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1186),
+                            FechaFin = new DateTime(2023, 9, 15, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5995),
+                            FechaInicio = new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5994),
                             UsuarioId = 4
                         },
                         new
                         {
                             Id = 5,
                             AplicacionId = 3,
-                            FechaFin = new DateTime(2023, 9, 16, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1190),
-                            FechaInicio = new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1189),
+                            FechaFin = new DateTime(2023, 9, 16, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5997),
+                            FechaInicio = new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5996),
                             UsuarioId = 1
                         },
                         new
                         {
                             Id = 6,
                             AplicacionId = 3,
-                            FechaFin = new DateTime(2023, 9, 17, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1193),
-                            FechaInicio = new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1191),
+                            FechaFin = new DateTime(2023, 9, 17, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(6000),
+                            FechaInicio = new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5999),
                             UsuarioId = 2
                         },
                         new
                         {
                             Id = 7,
                             AplicacionId = 1,
-                            FechaFin = new DateTime(2023, 9, 18, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1195),
-                            FechaInicio = new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1194),
+                            FechaFin = new DateTime(2023, 9, 18, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(6003),
+                            FechaInicio = new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(6002),
                             UsuarioId = 3
                         },
                         new
                         {
                             Id = 8,
                             AplicacionId = 1,
-                            FechaFin = new DateTime(2023, 9, 19, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1198),
-                            FechaInicio = new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1197),
+                            FechaFin = new DateTime(2023, 9, 19, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(6005),
+                            FechaInicio = new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(6004),
                             UsuarioId = 4
                         });
                 });
@@ -166,36 +166,36 @@ namespace BackendINAISO.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1000),
-                            ModifiedAt = new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1051),
+                            CreatedAt = new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5803),
+                            ModifiedAt = new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5848),
                             Name = "Usuario1"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1053),
-                            ModifiedAt = new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1054),
+                            CreatedAt = new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5850),
+                            ModifiedAt = new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5851),
                             Name = "Usuario2"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1056),
-                            ModifiedAt = new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1057),
+                            CreatedAt = new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5853),
+                            ModifiedAt = new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5854),
                             Name = "Usuario3"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1059),
-                            ModifiedAt = new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1060),
+                            CreatedAt = new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5856),
+                            ModifiedAt = new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5857),
                             Name = "Usuario4"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1061),
-                            ModifiedAt = new DateTime(2023, 9, 9, 17, 18, 43, 620, DateTimeKind.Local).AddTicks(1062),
+                            CreatedAt = new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5859),
+                            ModifiedAt = new DateTime(2023, 9, 9, 17, 35, 36, 634, DateTimeKind.Local).AddTicks(5860),
                             Name = "Usuario5"
                         });
                 });

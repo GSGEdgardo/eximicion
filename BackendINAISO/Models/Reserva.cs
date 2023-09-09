@@ -7,13 +7,14 @@ namespace backendINAISO.Models
     public class Reserva
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [ForeignKey("Usuario")]
-        public int UsuarioId { get; set; }
+        [ForeignKey("usuario_id")]
+        public virtual int UsuarioId { get; set; }
 
-        [ForeignKey("Aplicacion")]
-        public int AplicacionId { get; set; }
+        [ForeignKey("aplicacion_id")]
+        public virtual int AplicacionId { get; set; }
 
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFin { get; set; }

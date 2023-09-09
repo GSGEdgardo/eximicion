@@ -7,6 +7,7 @@ namespace backendINAISO.Models
     public class Aplicacion
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         public string Clase { get; set; }
