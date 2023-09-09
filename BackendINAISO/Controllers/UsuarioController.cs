@@ -2,10 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using backendINAISO.Data; // Asegúrate de ajustar esto según la ubicación real de tu contexto
 using backendINAISO.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace backendINAISO.Controllers
 {
