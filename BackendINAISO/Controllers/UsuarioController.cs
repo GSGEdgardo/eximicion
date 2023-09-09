@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using backendINAISO.Data; // Asegúrate de ajustar esto según la ubicación real de tu contexto
+using backendINAISO.Data;
 using backendINAISO.Models;
 
 namespace backendINAISO.Controllers
@@ -16,18 +16,47 @@ namespace backendINAISO.Controllers
             _context = context;
         }
 
-        // GET: api/Usuarios
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Usuario>>> GetUsuarios()
+        public async Task<ActionResult<IEnumerable<UsuarioViewModel>>> GetUsuarios()
         {
-            return await _context.Usuarios.ToListAsync();
+            var usuarios = await _context.Usuarios
+                .Include(u => u.Reservas)
+                .Select(u => new UsuarioViewModel
+                {
+                    Id = u.Id,
+                    Nombre = u.Name,
+                    Reservas = u.Reservas.Select(r => new ReservaViewModel
+                    {
+                        Id = r.Id,
+                        Aplicacion = r.Aplicacion.Clase, // Supongamos que tienes una propiedad "Nombre" en la clase Aplicacion
+                        FechaInicio = r.FechaInicio,
+                        FechaFin = r.FechaFin
+                    }).ToList()
+                })
+                .ToListAsync();
+
+            return usuarios;
         }
 
-        // GET: api/Usuarios/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Usuario>> GetUsuario(int id)
+        public async Task<ActionResult<UsuarioViewModel>> GetUsuario(int id)
         {
-            var usuario = await _context.Usuarios.FindAsync(id);
+            var usuario = await _context.Usuarios
+                .Include(u => u.Reservas)
+                .Where(u => u.Id == id)
+                .Select(u => new UsuarioViewModel
+                {
+                    Id = u.Id,
+                    Nombre = u.Name,
+                    Reservas = u.Reservas.Select(r => new ReservaViewModel
+                    {
+                        Id = r.Id,
+                        Aplicacion = r.Aplicacion.Clase, // Supongamos que tienes una propiedad "Nombre" en la clase Aplicacion
+                        FechaInicio = r.FechaInicio,
+                        FechaFin = r.FechaFin
+                    }).ToList()
+                })
+                .FirstOrDefaultAsync();
 
             if (usuario == null)
             {
@@ -37,7 +66,6 @@ namespace backendINAISO.Controllers
             return usuario;
         }
 
-        // POST: api/Usuarios
         [HttpPost]
         public async Task<ActionResult<Usuario>> PostUsuario(Usuario usuario)
         {
@@ -47,7 +75,6 @@ namespace backendINAISO.Controllers
             return CreatedAtAction(nameof(GetUsuario), new { id = usuario.Id }, usuario);
         }
 
-        // PUT: api/Usuarios/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUsuario(int id, Usuario usuario)
         {
@@ -77,7 +104,6 @@ namespace backendINAISO.Controllers
             return NoContent();
         }
 
-        // DELETE: api/Usuarios/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUsuario(int id)
         {

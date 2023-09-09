@@ -2,7 +2,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using backendINAISO.Data; // Asegúrate de ajustar esto según la ubicación real de tu contexto
+using backendINAISO.Data;
+using System.Text.Json.Serialization; // Asegúrate de ajustar esto según la ubicación real de tu contexto
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +24,11 @@ builder.Services.AddCors(options =>
                    .AllowAnyMethod();
         });
 });
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+    });
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
