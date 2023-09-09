@@ -11,6 +11,8 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
 2. **Editor de Código:** Se debe utilizar un editor de código. La aplicación fue desarrollada en VS Code.
 
+3. **Extensiones:** Al trabajar se utilizó .NET Core 7.0.10, las extensiones que un Editor de Código le puede solicitar serían la extensión de C# y la extensión de SQLite puesto que la base de datos está hecha con SQLite, la extensión de SQLite debe ser la que fue subida por alexcvzz.
+
 ## Instrucciones de Uso
 
 ### 1. Clonar el Repositorio
