@@ -25,6 +25,8 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -35,16 +37,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseAuthorization();
+app.UseAuthentication();
+app.MapControllers();
 app.UseCors("AllowLocalhost3000");
 
-app.UseHttpsRedirection(); // Si es necesario
-app.UseRouting();
-
-app.UseAuthorization();
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-});
-
-app.Run();
+app.Run("http://localhost:5099");
