@@ -12,7 +12,14 @@ namespace backendINAISO.Data
         public DbSet<Aplicacion> Aplicaciones { get; set; }
         public DbSet<Reserva> Reservas { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+
         
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            // Configura la conexión a SQLite
+            optionsBuilder.UseSqlite("Data Source=miBaseDeDatos.db");
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Reserva>()
