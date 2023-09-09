@@ -22,16 +22,23 @@ git clone https://github.com/GSGEdgardo/eximicion.git
 ```
 
 ### 2. Se debe ingresar al repositorio 
-correr en la consola el comando: "cd BackendINAISO"
-
+correr en la consola el comando
+```bash
+cd BackendINAISO
+```
 ### 3. Se deben restaurar las dependencias
 
-Para eso se debe ejecutar el comando 'dotnet restore'
-
+Para eso se debe ejecutar el comando 
+```bash
+dotnet restore
+```
 ### 4. Base de datos
 
 La aplicación está utilizando SQLite, la conexión Default está en el appsettings.json y la base de datos se llama "miBaseDeDatos.db"
-aquí es como se ve:  "DefaultConnection": "Data Source=miBaseDeDatos.db"
+aquí es como se ve 
+```bash
+"DefaultConnection": "Data Source=miBaseDeDatos.db"
+```
 
 ### 5. Aplicar migraciones
 
@@ -44,7 +51,12 @@ La aplicación está construida en .NET, como ya se ejecutó las dependencias co
 
 ### 7. Como utilizar los endpoints
 
-La aplicación al ejecutarse soltará cuatro bloques de información en la consola, en el primero de ellos aparece el localhost el cual es http://localhost:5099, para poder utilizarlo se puede:
+La aplicación al ejecutarse soltará cuatro bloques de información en la consola, en el primero de ellos aparece el localhost el cual es 
+```bash
+http://localhost:5099
+```
+
+#### Para poder utilizarlo se puede:
 
 -> Usar herramientas como Postman y utilizar el localhost junto a la petición, por ejemplo: http://localhost:5099/api/Reservas/reporteReservasPorUsuario 
 
