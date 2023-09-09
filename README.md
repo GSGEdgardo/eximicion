@@ -58,9 +58,19 @@ http://localhost:5099
 
 #### Para poder utilizarlo se puede:
 
--> Usar herramientas como Postman y utilizar el localhost junto a la petición, por ejemplo: http://localhost:5099/api/Reservas/reporteReservasPorUsuario 
+Usar herramientas como Postman y utilizar el localhost junto a la petición, por ejemplo: 
 
--> Ir a un sitio web y colocar: "http://localhost:5099/swagger/index.html" ahí aparecerán los endpoints
+```bash
+http://localhost:5099/api/Reservas/reporteReservasPorUsuario
+```
+ 
+Ir a un sitio web y colocar: 
+
+```bash
+"http://localhost:5099/swagger/index.html"
+```
+
+Ahí aparecerán los endpoints
 
 ### 8. Que es cada endpoint
 
@@ -83,11 +93,15 @@ también se implementó algo similar pero en vez de cada usuario, se hizo un end
 
 Estos dos endpoints son los siguientes:
 
+```bash
 /api/Reservas/reporteReservasPorUsuario
+```
 
 y
 
+```bash
 /api/Reservas/reporteReservasPorAplicacion
+```
 
 (para poder utilizarlos en Postman no olvidar incluir http://localhost:5099 y especificar que son peticiones GET)
 
@@ -97,14 +111,16 @@ o sea, se implementaron los siguientes endpoints PARA EL USUARIO:
 
 *** NO OLVIDAR INCLUIR http://localhost:5099 y luego colocar el siguiente texto***
 
-1. /api/Usuarios (petición de tipo GET)
+```bash
 
-2. /api/Usuarios (petición de tipo POST)
+/api/Usuarios (petición de tipo GET)
 
-3. /api/Usuarios/{id} (petición de tipo GET, el id es para obtener un usuario específico buscado por su id)
+/api/Usuarios (petición de tipo POST)
 
-4. /api/Usuarios/{id} (petición de tipo PUT, el id es para obtener un usuario específico buscado por su id)
+/api/Usuarios/{id} (petición de tipo GET, el id es para obtener un usuario específico buscado por su id)
 
-5. /api/Usuarios/{id} (petición de tipo DELETE, el id es para obtener un usuario específico buscado por su id)
+/api/Usuarios/{id} (petición de tipo PUT, el id es para obtener un usuario específico buscado por su id)
 
+/api/Usuarios/{id} (petición de tipo DELETE, el id es para obtener un usuario específico buscado por su id)
+```
 Eso es todo para probar las peticiones por backend, La aplicación lamentablemente no tiene frontend porque no me alcanzó el tiempo, pero el backend debería estar en orden en su gran mayoría
