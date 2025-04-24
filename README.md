@@ -1,5 +1,3 @@
-# eximicion
-
 # Backend de INAISO - Guía de Uso
 
 ## Requisitos Previos
